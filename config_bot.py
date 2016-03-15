@@ -1,5 +1,5 @@
 import os
-programs = {'apache': '', 'mysql': '', 'php': '', 'phpmyadmin': ''}
+programs = {'apache': '', 'mysql': '', 'php': '', 'phpmyadmin': '', 'git': ''}
 print ' =========================================\n Installazione \n ========================================='
 scelta = raw_input(' 1 - Installa tutti i pacchetti\n 2 - Seleziona pacchetti da installare\n 3 - Installa pacchetto custom\n 4 - Vedi lista pacchetti\n')
 
@@ -13,6 +13,8 @@ def sceltadue():
 		os.system('php5 libapache2-mod-php5 php5-mcrypt --assume-yes')
 	if programs['phpmyadmin'] == '' or programs['phpmyadmin'] == 'Y':
 		os.system('apt-get install phpmyadmin apache2-utils --assume-yes')
+	if programs['phpmyadmin'] == '' or programs['phpmyadmin'] == 'Y':
+		os.system('apt-get install git apache2-utils --assume-yes')
 
 if scelta == '1':
 	for key, value in programs.iteritems():
